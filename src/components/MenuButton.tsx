@@ -13,9 +13,9 @@ const MenuButton: Component<MenuButtonProps> = (props) => {
   return (
     <button id="nav-toggle" type="button" onClick={() => toggleNav()}>
       {props.openedNav ? (
-        <FaSolidXmark class="close" color="#f6e7e0" size="1.75rem" />
+        <FaSolidXmark class="close" color="#222" size="1.75rem" />
       ) : (
-        <FaSolidBarsStaggered class="open" color="#f6e7e0" size="1.75rem" />
+        <FaSolidBarsStaggered class="open" color="#222" size="1.75rem" />
       )}
     </button>
   );

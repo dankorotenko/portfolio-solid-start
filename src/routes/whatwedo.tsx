@@ -4,7 +4,9 @@ export default function WhatWeDo() {
   return (
     <>
       <Title>What We Do | Synestia</Title>
-      <h1>What We Do</h1>
+      <section class="whatwedo">
+        <h1>What We Do</h1>
+      </section>
     </>
   );
 }

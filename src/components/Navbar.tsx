@@ -17,7 +17,7 @@ const NavBar: Component<NavbarProps> = (props) => {
           </h2>
           <img
             class="nav-link-image"
-            src="https://images.unsplash.com/photo-1674148982213-649753a41f85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80"
+            src="https://images.unsplash.com/photo-1622700505454-5c0929990414?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
             alt="no-img"
           />
         </A>
@@ -31,7 +31,7 @@ const NavBar: Component<NavbarProps> = (props) => {
           </h2>
           <img
             class="nav-link-image"
-            src="https://images.unsplash.com/photo-1583050125177-185aed9e8858?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80"
+            src="https://images.unsplash.com/photo-1509023464722-18d996393ca8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
             alt="no-img"
           />
         </A>

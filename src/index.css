@@ -15,9 +15,6 @@ main {
 }
 
 main {
-  background-image: url("https://images.unsplash.com/photo-1676597633910-5a1894fc73be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80");
-  background-size: cover;
-  background-position: center 0%;
   position: relative;
   z-index: 2;
   transition: transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
@@ -34,11 +31,12 @@ main.opened {
   left: 50%;
   bottom: 3rem;
   transform: translateX(-50%);
-  background-color: rgb(182, 142, 113);
+  background-color: rgb(220, 198,250);
   border: none;
   border-radius: 5rem;
   outline: none;
   box-shadow: 0 0 4rem rgba(0 0 0 / 35%);
+  box-shadow: 4px 4px 0 #000;
   cursor: pointer;
   transition: transform, background-color;
   transition-timing-function: ease;
@@ -164,3 +162,45 @@ div#root:hover > .trailer {
   opacity: 1;
 }
 
+
+section{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.home{
+  background-image: url("https://images.unsplash.com/photo-1622700505454-5c0929990414?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
+  background-size: cover;
+  background-position: center 0%;
+}
+section h1{
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 6rem;
+  letter-spacing: 2rem;
+}
+
+section.whatwedo{
+  background-image: url("https://images.unsplash.com/photo-1509023464722-18d996393ca8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
+  background-size: cover;
+  background-position: center 0%;
+}
+section.portfolio{
+  background-image: url("https://images.unsplash.com/photo-1636425946927-1a948d0ef0b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80");
+  background-size: cover;
+  background-position: center 0%;
+}
+section.skills{
+  background-image: url("https://images.unsplash.com/photo-1675701209564-1046c5b6ce10?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80");
+  background-size: cover;
+  background-position: center 0%;
+}
+section.contact{
+  background-image: url("https://images.unsplash.com/photo-1676085271283-841691e906a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1289&q=80");
+  background-size: cover;
+  background-position: center 0%;
+}

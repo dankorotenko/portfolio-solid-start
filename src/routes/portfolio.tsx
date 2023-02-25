@@ -4,7 +4,9 @@ export default function Portfolio() {
   return (
     <>
       <Title>Portfolio | Synestia</Title>
-      <h1>Portfolio</h1>
+      <section class="portfolio">
+        <h1>Portfolio</h1>
+      </section>
     </>
   );
 }

@@ -4,7 +4,9 @@ export default function Skills() {
   return (
     <>
       <Title>Skills | Synestia</Title>
-      <h1>Skills</h1>
+      <section class="skills">
+        <h1>Skills</h1>
+      </section>
     </>
   );
 }

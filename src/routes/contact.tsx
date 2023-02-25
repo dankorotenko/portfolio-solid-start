@@ -4,7 +4,9 @@ export default function Contact() {
   return (
     <>
       <Title>Contact | Synestia</Title>
-      <h1>Contact</h1>
+      <section class="contact">
+        <h1>Contact</h1>
+      </section>
     </>
   );
 }
