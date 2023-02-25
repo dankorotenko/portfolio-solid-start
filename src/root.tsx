@@ -1,14 +1,13 @@
 // @refresh reload
 import { Suspense, createSignal } from "solid-js";
 import {
-  A,
+
   Body,
   ErrorBoundary,
   FileRoutes,
   Head,
   Html,
   Meta,
-  Route,
   Routes,
   Scripts,
   Title,
