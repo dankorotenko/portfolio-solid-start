@@ -1,7 +1,6 @@
 // @refresh reload
 import { Suspense, createSignal } from "solid-js";
 import {
-
   Body,
   ErrorBoundary,
   FileRoutes,
@@ -16,9 +15,11 @@ import MenuButton from "./components/MenuButton";
 import NavBar from "./components/Navbar";
 import Trailer from "./components/Trailer";
 import "./index.css";
+import logo from './assets/logo.svg'
 
 export default function Root() {
   const [openedNav, setOpenedNav] = createSignal(false);
+
   return (
     <Html lang="en">
       <Head>
@@ -29,13 +30,14 @@ export default function Root() {
       <Body>
         <Suspense>
           <ErrorBoundary>
-          <Trailer />
+            <Trailer />
             <main class={`${openedNav() ? "opened" : "closed"}`}>
+              <header><img src={logo} alt="logo" />Synestia</header>
               <Routes>
                 <FileRoutes />
               </Routes>
             </main>
-            <NavBar openedNav={openedNav()} setOpenedNav={setOpenedNav}/>
+            <NavBar openedNav={openedNav()} setOpenedNav={setOpenedNav} />
             <MenuButton openedNav={openedNav()} setOpenedNav={setOpenedNav} />
           </ErrorBoundary>
         </Suspense>
