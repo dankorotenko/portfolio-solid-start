@@ -19,28 +19,38 @@ main {
 main {
   position: relative;
   z-index: 2;
+  -webkit-transition: -webkit-transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
+  transition: -webkit-transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
+  -o-transition: transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
   transition: transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
+  transition: transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97), -webkit-transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
 }
 main.opened {
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 header {
   position: absolute;
   top: 3rem;
   /* left: 5rem; */
   padding-inline: 4.6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 2rem;
   font-size: 2.25rem;
   font-weight: 700;
   text-transform: uppercase;
 }
-@media (width<=1440px){
+@media (max-width: 1440px){
   header{
   }
 }
-@media (width<=1024px){
+@media (max-width:1024px){
 
   header{
     font-size: 1.5rem;
@@ -51,13 +61,13 @@ header {
     height: 60px;
   }
 }
-@media (width<=768px){
+@media (max-width:768px){
 
   header{
     font-size: 1.25rem;
   }
 }
-@media (width<=520px){
+@media (max-width:520px){
 
   header{
     top: 2rem;
@@ -76,38 +86,66 @@ header {
   z-index: 3;
   left: 50%;
   bottom: 3rem;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   background-color: rgb(220, 198,250);
   border: none;
   border-radius: 5rem;
   outline: none;
-  box-shadow: 0 0 4rem rgba(0 0 0 / 35%);
-  box-shadow: 4px 4px 0 #000;
+  -webkit-box-shadow: 0 0 4rem rgba(0 0 0 / 35%);
+          box-shadow: 0 0 4rem rgba(0 0 0 / 35%);
+  -webkit-box-shadow: 4px 4px 0 #000;
+          box-shadow: 4px 4px 0 #000;
   cursor: pointer;
+  -webkit-transition: background-color, -webkit-transform;
+  transition: background-color, -webkit-transform;
+  -o-transition: transform, background-color;
   transition: transform, background-color;
-  transition-timing-function: ease;
-  transition-duration: 400ms;
+  transition: transform, background-color, -webkit-transform;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: 400ms;
+       -o-transition-duration: 400ms;
+          transition-duration: 400ms;
 }
 #nav-toggle:hover {
-  transform: translateX(-50%) scale(1.04);
+  -webkit-transform: translateX(-50%) scale(1.04);
+      -ms-transform: translateX(-50%) scale(1.04);
+          transform: translateX(-50%) scale(1.04);
 }
 #nav-toggle:active {
-  transform: translateX(-50%) scale(0.96);
+  -webkit-transform: translateX(-50%) scale(0.96);
+      -ms-transform: translateX(-50%) scale(0.96);
+          transform: translateX(-50%) scale(0.96);
 }
 #nav-toggle > svg {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
+  -webkit-transform: translate(-50%, -50%) scale(0.9);
+      -ms-transform: translate(-50%, -50%) scale(0.9);
+          transform: translate(-50%, -50%) scale(0.9);
   opacity: 0;
+  -webkit-transition: opacity, -webkit-transform;
+  transition: opacity, -webkit-transform;
+  -o-transition: transform, opacity;
   transition: transform, opacity;
-  transition-timing-function: ease;
-  transition-duration: 400ms;
+  transition: transform, opacity, -webkit-transform;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: 400ms;
+       -o-transition-duration: 400ms;
+          transition-duration: 400ms;
 }
 
 #nav-toggle:hover > svg {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+      -ms-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
 }
 
 #nav-links > .nav-link {
@@ -124,11 +162,21 @@ header {
   font-size: 1.25rem;
   margin: 0;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: .5rem;
-  transform: translateX(-3%);
+  -webkit-transform: translateX(-3%);
+      -ms-transform: translateX(-3%);
+          transform: translateX(-3%);
+  -webkit-transition: -webkit-transform 400ms ease;
+  transition: -webkit-transform 400ms ease;
+  -o-transition: transform 400ms ease;
   transition: transform 400ms ease;
+  transition: transform 400ms ease, -webkit-transform 400ms ease;
 }
 
 #nav-links > .nav-link > .nav-link-label > .nav-link-label-active {
@@ -143,7 +191,9 @@ header {
   opacity: 1;
 }
 #nav-links > .nav-link:hover > .nav-link-label{
-  transform: translateX(0);
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 
 #nav-links > .nav-link > .nav-link-image {
@@ -151,10 +201,19 @@ header {
   aspect-ratio: 1.8 / 1;
   border-radius: 0.5rem;
   margin-top: 0.75rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-transform;
+  transition: -webkit-transform;
+  -o-transition: transform;
   transition: transform;
-  transition-duration: 400ms;
-  transition-timing-function: ease;
+  transition: transform, -webkit-transform;
+  -webkit-transition-duration: 400ms;
+       -o-transition-duration: 400ms;
+          transition-duration: 400ms;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
 
 nav {
@@ -167,15 +226,25 @@ nav {
   overflow: scroll;
 }
 #nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: clamp(1rem, 2vw, 2rem);
   margin-top: clamp(2rem, 2vw, 3rem);
   padding: 0 clamp(1rem, 2vw, 2rem);
-  transform: translateY(70%) scale(0.9);
+  -webkit-transform: translateY(70%) scale(0.9);
+      -ms-transform: translateY(70%) scale(0.9);
+          transform: translateY(70%) scale(0.9);
+  -webkit-transition: -webkit-transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
+  transition: -webkit-transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
+  -o-transition: transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
   transition: transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
+  transition: transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97), -webkit-transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
 }
 #nav-links.opened{
-  transform: translateY(0) scale(1);
+  -webkit-transform: translateY(0) scale(1);
+      -ms-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
 }
 
 .trailer{
@@ -191,10 +260,18 @@ nav {
 
   pointer-events: none;
   opacity: 0;
+  -webkit-transition: opacity 500ms ease;
+  -o-transition: opacity 500ms ease;
   transition: opacity 500ms ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 div#root:hover > .trailer {
@@ -211,27 +288,43 @@ div#root:hover > .trailer {
   position: absolute;
   background-color: white;
   border-radius: 50%;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .blink_1 {
-  animation-name: blink10;
+  -webkit-animation-name: blink10;
+          animation-name: blink10;
 }
 
 .blink_2 {
-  animation-name: blink20;
+  -webkit-animation-name: blink20;
+          animation-name: blink20;
 }
 
 .blink_3 {
-  animation-name: blink30;
+  -webkit-animation-name: blink30;
+          animation-name: blink30;
 }
 
 .blink_4 {
-  animation-name: blink40;
+  -webkit-animation-name: blink40;
+          animation-name: blink40;
 }
 
 .blink_5 {
-  animation-name: blink50;
+  -webkit-animation-name: blink50;
+          animation-name: blink50;
+}
+
+@-webkit-keyframes blink10 {
+  0%, 100% {
+    background-color: #FFF;
+  }
+  20% {
+    background-color: transparent;
+  }
 }
 
 @keyframes blink10 {
@@ -239,6 +332,15 @@ div#root:hover > .trailer {
     background-color: #FFF;
   }
   20% {
+    background-color: transparent;
+  }
+}
+
+@-webkit-keyframes blink20 {
+  0%, 100% {
+    background-color: #fff;
+  }
+  40% {
     background-color: transparent;
   }
 }
@@ -252,11 +354,29 @@ div#root:hover > .trailer {
   }
 }
 
+@-webkit-keyframes blink50 {
+  0%, 100% {
+    background-color: #FFF;
+  }
+  50% {
+    background-color: transparent;
+  }
+}
+
 @keyframes blink50 {
   0%, 100% {
     background-color: #FFF;
   }
   50% {
+    background-color: transparent;
+  }
+}
+
+@-webkit-keyframes blink30 {
+  0%, 100% {
+    background-color: #FFF;
+  }
+  60% {
     background-color: transparent;
   }
 }
@@ -267,6 +387,15 @@ div#root:hover > .trailer {
   }
   60% {
     background-color: transparent;
+  }
+}
+
+@-webkit-keyframes blink40 {
+  0%, 100% {
+    background-color: transparent;
+  }
+  80% {
+    background-color: #FFF;
   }
 }
 
@@ -283,9 +412,15 @@ div#root:hover > .trailer {
 section{
   width: 100%;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 section.home{
